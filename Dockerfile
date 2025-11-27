@@ -24,8 +24,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 7860
 
 # Argumente/Umgebungsvariablen für Sprint/Variante
-ARG UI_SCRIPT=ragshop/SalesConsultant/UseInterface.py
-ENV UI_SCRIPT=${UI_SCRIPT}
+ARG START_SCRIPT=ragshop/SalesConsultant/UseInterface.py
+ENV START_SCRIPT=${START_SCRIPT}
 
 # PYTHONPATH setzen, damit /app/src als Modulpfad gilt
 ENV PYTHONPATH=/app/src

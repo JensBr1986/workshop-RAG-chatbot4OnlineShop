@@ -1,4 +1,3 @@
 #!/bin/sh
 set -e
-
-exec python $UI_SCRIPT
+sh -c "$START_SCRIPT"

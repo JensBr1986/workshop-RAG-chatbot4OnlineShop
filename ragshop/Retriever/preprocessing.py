@@ -3,10 +3,11 @@ import json
 from chromadb.utils import embedding_functions
 from chromadb import PersistentClient
 
+from settings import WORKSPACE_PATH
 
 # Pfade
-DATA_PATH = "../../data/raw/products.json"
-DB_DIR = "../../vectorstore/chromadb"
+DATA_PATH = WORKSPACE_PATH / "data" / "raw" / "products.json"
+DB_DIR = WORKSPACE_PATH / "vectorstore" / "chromadb"
 COLLECTION_NAME = "products"
 EMBEDDING_MODEL_NAME = "all-MiniLM-L12-v2"
 

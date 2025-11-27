@@ -9,10 +9,10 @@ services:
       dockerfile: Dockerfile
       args:
         # Übergabe von Build-Argumenten aus .env
-        UI_SCRIPT: ${UI_SCRIPT}
+        START_SCRIPT: ${START_SCRIPT}
     tty: true
     environment:
-      - UI_SCRIPT=${UI_SCRIPT}
+      - START_SCRIPT=${START_SCRIPT}
       - PYTHONPATH=/app/src
       - WEBUI_API_KEY=#top-secret#
     ports:

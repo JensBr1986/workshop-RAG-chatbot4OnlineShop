@@ -5,8 +5,10 @@ from ragshop.Retriever.preprocessing import COLLECTION_NAME
 from ragshop.Retriever.preprocessing import EMBEDDING_MODEL_NAME
 from abc import ABC, abstractmethod
 
+from settings import WORKSPACE_PATH
+
 # Einstellungen
-DB_DIR = "../vectorstore/chromadb"
+DB_DIR = WORKSPACE_PATH / "vectorstore" / "chromadb"
 
 
 
