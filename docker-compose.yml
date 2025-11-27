@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  rag-chatbot:
+    image: rag-chatbot:latest
+    container_name: rag-chatbot
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Übergabe von Build-Argumenten aus .env
+        UI_SCRIPT: ${UI_SCRIPT}
+    tty: true
+    environment:
+      - UI_SCRIPT=${UI_SCRIPT}
+      - PYTHONPATH=/app/src
+      - WEBUI_API_KEY=#top-secret#
+    ports:
+      - "${HOST_PORT}:7860"
+    volumes:
+      - ./:/app/src
