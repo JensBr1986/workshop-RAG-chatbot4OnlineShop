@@ -12,8 +12,7 @@ RUN apt-get update && apt-get install -y \
 
 # Repo klonen
 # RUN git clone https://github.com/magnusse/workshop-RAG-chatbot4OnlineShop.git src
-
-COPY . /app/src
+COPY ./requirements.txt /app/src/requirements.txt
 
 WORKDIR /app/src
 
