@@ -110,10 +110,10 @@ podman build -t rag-chatbot .
 
 **Docker**
 ```
-docker run -it -e UI_SCRIPT=sprint1-ragshop/SalesConsultant/UseInterface.py -p 7860:7860 rag-chatbot 
+docker run -it -e UI_SCRIPT=sprint1-ragshop/SalesConsultant/UseInterface.py -p 7860:7860 rag-chatbot --name rag-chatbot
 ```
 
 **Podman**
 ```
-podman run -it -e UI_SCRIPT=sprint1-ragshop/SalesConsultant/UseInterface.py -p 7860:7860 rag-chatbot 
+podman run -it -e UI_SCRIPT=sprint1-ragshop/SalesConsultant/UseInterface.py -p 7860:7860 rag-chatbot --name rag-chatbot
 ```
