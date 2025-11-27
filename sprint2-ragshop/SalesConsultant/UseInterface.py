@@ -21,5 +21,5 @@ def respond(message, history):
 gr.ChatInterface(
         fn=respond,
         type="messages"
-).launch()
+).launch(server_name="0.0.0.0", server_port=7860)
 
